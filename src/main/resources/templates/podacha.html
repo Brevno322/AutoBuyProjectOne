@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:th="http://thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<title>Объявления</title>
+	<link rel="stylesheet" href="/static/assets/podacha/css/podachastyle.css">
+</head>
+<body>
+<p th:text="${promoForm}"></p>
+	<form class="group" method="post" th:action="@{/promo}" th:object="${promoForm}">
+		<center><h1 title="Форма регистрации на сайте">Подача Объявления</h1></center>
+		<div class="group">
+			<input type="text" name="marka" th:fild="*{marka}" placeholder="Марка авто">
+		</div>
+		<div class="group">
+			<input type="text" name="type" th:fild="*{type}" placeholder="Тип кузова">
+		</div>
+		<div class="group">
+			<input type="text" name="engine" th:fild="*{engine}" placeholder="Объем двигателя">
+		</div>
+		<div class="group">
+			<input type="text" name="colour" th:fild="*{colour}" placeholder="Цвет авто">
+		</div>
+         <div class="group">
+            <input type="text" name="kpp" th:fild="*{kpp}" placeholder="Вид КПП">
+          </div>
+		<div class="group">
+			<button>Подать Объявления</button>
+		</div>
+       
+	</form>
+</body>
+</html>

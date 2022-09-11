@@ -1,0 +1,378 @@
+/*Обнуление*/
+*,
+*::before,
+*::after{
+	padding:0;
+	margin:0;
+	border:0;
+	box-sizing:border-box;
+}
+a{
+	text-decoration:none;
+}
+ul,ol,li{
+	list-style:none;
+}
+img{
+	vertical-align:top;
+    z-index: 0;
+
+   
+}
+h1,h2,h3,h4,h5,h6{
+	font-weight:inherit;
+	font-size:inherit;
+}
+html,body{
+    width: 100%;
+	height:100%;
+	line-height:1;
+	font-size:15px;
+	color:#fff;
+	font-weight:500;
+	font-family: 'Roboto Condensed', sans-serif;
+}
+/* .wrapper{
+	min-height:100%;
+	overflow:hidden;
+	display:flex;
+	flex-direction: column;
+} */
+/*создание технического класса _------------------------------*/
+._container{
+	max-width:1046px;
+	padding:0px 15px;
+	margin:0px auto;
+	box-sizing:content-box;
+}
+
+._ibg img{
+	width: 100%;
+	height: 117%;
+	top: 0;
+	left: 0;
+	object-fit: cover;
+    z-index: 0;
+}
+/*шапка------------------------------------------------------*/
+
+.header{
+	position:absolute;
+	width:100%;
+	left:0;
+	top:0;
+    z-index: 1;
+}
+.header_container{
+	display:flex;
+	min-height:114px;
+	align-items:center;
+}
+
+.header_logo{
+  
+    font-style: normal;
+    font-size: 3rem;
+    color: #fff;
+    margin-top: 1rem;
+}
+
+.header_menu{
+	margin:30px 0px 0px 300px;
+} 
+.menu{
+width: 208px;
+height: 66px;
+
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 59px;
+text-align: center;
+
+color: #fff;
+}
+.menu_list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 10%;
+    gap:1rem;
+
+}
+
+/*делаем отступы */
+.menu_item:not(:last-child){
+	margin:0px 21px 0px 0px;
+}
+
+.menu_link{
+	color:#fff;
+	font-weight:600;
+	line-height:calc(24/14*100%);
+}
+
+/*page================================*/
+/* .page{
+	flex:1 1 auto;
+} */
+
+/*main block--------------------------------------*/
+.main-block{
+
+    width: 100%;
+}
+
+.main-block {
+    position: relative;
+    z-index: 2;
+    width: 27rem;
+    margin: 11rem 0rem 9rem 5rem;
+}
+
+.main-block_title{
+	font-size: 58px;
+	line-height:calc(80/58*100%);
+	letter-spacing: 0.2px;
+	font-weight: 800;
+}
+.main-block_text{
+	color: #fff;
+	font-size: 20px;
+	line-height: 150%;
+}
+.main-block_buttons{
+	display: inline-flex;
+}
+.main-block_button{
+	
+	border-radius: 37px;
+	display: flex;
+	min-height: 48px;
+	justify-content: center;
+	align-items: center;
+	letter-spacing: 0.2px;
+
+	font-weight: 700;
+	line-height: 150%;
+	padding: 5px 36px;
+}
+.main-block_button:not(:last-child){
+	margin: 0px 10px 0px 0px;
+}
+.main-block_button{
+	background: rgb(73, 120, 88);
+	color:#fff;
+}
+.main-block_buttontwo{
+	border-radius: 37px;
+	display: flex;
+	min-height: 48px;
+	justify-content: center;
+	align-items: center;
+	letter-spacing: 0.2px;
+
+	font-weight: 700;
+	line-height: 150%;
+	padding: 5px 36px;
+}
+
+.main-block_buttontwo{
+	background: rgb(107, 64, 117);
+	color:#fff;
+}
+
+.main-block_image{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+.auto-marks{
+    width: auto;
+    height: 75%;
+    background-color: rgb(255, 255, 255);
+}
+
+.marks-items{
+	order: 2px solid #55c5e9; /* Рамка вокруг фотографии */
+    padding: 10px; /* Расстояние от картинки до рамки */
+    background: url(/assets/img/Les.jpg); /* Цвет фона */
+    margin-right: 0px; /* Отступ справа */
+    margin-bottom: 10px; /* Отступ снизу */
+}
+
+
+
+
+
+
+.car{
+    width: 95%;
+}
+.title-h2{
+    text-align: center;
+    font-size: 2.5rem;
+    color: black;
+    margin-top: 14rem;
+}
+
+.arrow-left {
+    position: absolute;
+    margin: 11rem 0rem 0rem 6%;
+}
+
+.arrow-right{
+    position: absolute;
+    margin: 11rem 0rem 0rem 90%;
+}
+
+.item{
+    display:flex;
+    justify-content: space-around;
+}
+.name{
+    text-align: center;
+    font-size: 20px;
+    line-height: 22px;
+    letter-spacing: 2px;
+    padding-top: 5px;
+    color: black;
+}
+
+.button-friends {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: nowrap;
+    margin-top: 12%;
+    gap: 10%;
+    align-items: center;
+    padding: 14px 39px;
+    border-radius: 40px;
+    font-size: 17px;
+    font-family: Georgia, sans-serif;
+    letter-spacing: 2px;
+    border: none;
+    margin-left: 24%;
+    border: 2px solid rgb(73, 120, 88);
+    cursor: pointer;
+    background-color: rgb(107, 64, 117);
+    color:#fff;
+}
+
+.img-cars{
+    width: 80%;
+    margin-left: 8%;
+}
+.item{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.cards-wrapper{
+    background:url(/assets/img/white.jpg);
+}
+
+.h2-cards{
+    text-align: center;
+    font-size: 2.5rem;
+    color: black;
+    margin-top: 14rem;
+    padding-top: 6rem;
+    margin-bottom: 6rem;
+}
+#footer {
+	background: url(/assets/img/look.com.ua-16951.jpg);
+	background-position: center 0px;
+	background-repeat: no-repeat;
+	background-size: 1886px 639px;
+	height: 350px;
+  
+  }
+  .footer__content {
+	display: flex;
+	width: 500px;
+	max-width: 500px;
+	margin: 0 auto;
+	margin-left: 197px;
+	margin-top: -26px;
+	padding: 0 0px;
+  }
+  .footer__container {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding-left: 40px;
+	padding-top: 7px;
+  }
+  .footer__container--contacts {
+	margin-right: 39px;
+	margin-top: -5px;
+	margin-bottom: 55px;
+	width: 278px;
+	height: 234px;
+  }
+  .footer__link--email {
+	margin-bottom: 46px;
+	color: #F1CDB3;
+	font-size: 21px;
+  }
+  .section__heading--footer {
+	color: white;
+	font-size: 2.280rem;
+	line-height: 2.844rem;
+	letter-spacing: 2px;
+	margin-bottom: 41px;
+	font-family: Georgia,sans-serif;
+	margin-left: 110px;
+	width: 285px;
+	height: 90px;
+	margin-top: 35px;
+  }
+  .footer__container--location {
+	margin-right: 132px;
+	margin-top: -6px;
+	margin-bottom: 25px;
+	width: 302px;
+	height: 324px;
+  }
+  .footer__link img {
+	margin-right: 20px;
+	margin-top: -2px;
+  }
+  .wrapper--footer {
+    padding-bottom: 0px;
+  }
+  .footer__link--email {
+    margin-bottom: 46px;
+   color: #F1CDB3;
+   margin-left: 110px;
+
+  }
+  .footer__link-tell {
+    letter-spacing: 0.06em;
+    line-height: 23px;
+    margin-top: -6px;
+    color: #F1CDB3;
+	margin-left: 110px;
+  }
+  #first-link{
+    margin-bottom: 35px;
+    margin-top: -8px;
+    margin-right: 21px;
+    color: #F1CDB3;
+    font-size: 21px;
+	margin-left: 110px;
+  }
+  #second-link{
+    margin-left: -20px;
+    color: #F1CDB3;
+    margin-top: -1px;
+    letter-spacing: 0.1rem;
+	
+  }
+
