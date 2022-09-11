@@ -1,10 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://thymeleaf.org">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
-</head>
+    <meta charset="UTF-8">
+    <title>Объявления</title>
+    <link rel="stylesheet" href="/assets/declaration/updateDeclaration.css">
+
+</head >
 <body>
-$END$
+<form class="group" method="post" th:action="@{/updateDeclaration}" th:object="${updateDeclaration}">
+    <center><h1 title="Форма регистрации на сайте">Изменение Объявления</h1></center>
+    <div class="group">
+
+
+        <input list="marks" type="text" name="marka" placeholder="Марка авто">
+        <datalist id="marks">
+
+            <option value="BMW"/>
+            <option value="Mercedes"/>
+            <option value="LADA"/>
+            <option value="Renault"/>
+            <option value="Fiat"/>
+            <option value="Honda"/>
+            <option value="KIA"/>
+            <option value="chevrolet"/>
+            <option value="Skoda"/>
+            <option value="Toyota"/>
+
+        </datalist>
+
+    </div>
+    <div class="group">
+        <input list="type" type="text" name="type"  placeholder="Тип кузова">
+        <datalist id="type">
+            <option value="седан"/>
+            <option value="универсал"/>
+            <option value="хэтч-бэк"/>
+            <option value="купе"/>
+            <option value="кабриолет"/>
+            <option value="минивен"/>
+        </datalist>
+    </div>
+    <div class="group">
+        <input list="engine" type="text" name="engine"  placeholder="Объем двигателя">
+        <datalist id="engine">
+            <option value="1.1"/>
+            <option value="1.2"/>
+            <option value="1.3"/>
+            <option value="1.4"/>
+            <option value="1.5"/>
+            <option value="1.6"/>
+            <option value="1.7"/>
+            <option value="1.8"/>
+            <option value="1.9"/>
+            <option value="2.0"/>
+            <option value="2.1"/>
+            <option value="2.2"/>
+        </datalist>
+    </div>
+    <div class="group">
+        <input  list="colour" type="text" name="colour"  placeholder="Цвет авто">
+        <datalist id="colour">
+            <option value="Белый"/>
+            <option value="Желтый"/>
+            <option value="Зеленый"/>
+            <option value="Красный"/>
+            <option value="Серый"/>
+            <option value="Синий"/>
+            <option value="Фиолетовый"/>
+            <option value="Черный"/>
+        </datalist>
+    </div>
+    <div class="group">
+        <input  list="kpp" type="text" name="kpp"  placeholder="Вид КПП">
+        <datalist id="kpp">
+            <option value="Механическая"/>
+            <option value="Автоматическая"/>
+            <option value="Робот"/>
+            <option value="Вариатор"/>
+        </datalist>
+    </div>
+    <div class="group">
+        <button>Изменить объявления</button>
+    </div>
+
+</form>
 </body>
 </html>

@@ -1,2 +1,5 @@
-package buy.autobuy.autobuyproject.service;public interface PromoService {
+package buy.autobuy.autobuyproject.service;
+
+public interface PromoService {
+
 }

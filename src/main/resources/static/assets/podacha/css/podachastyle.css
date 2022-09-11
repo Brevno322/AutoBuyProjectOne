@@ -1,5 +1,5 @@
 body {
-	background:  linear-gradient(rgba(255, 3, 3, 0.3),rgba(0,0,0,.3)),url(../../img/5db933a1c0633170c27d1a6026031dac.jpg);
+	background:  linear-gradient(rgba(255, 3, 3, 0.3),rgba(0,0,0,.3)),url(../../img/buick-1400243_1280.jpg);
 	-webkit-background-size: cover;
 	background-size: cover;
 	background-attachment: fixed;
@@ -19,6 +19,9 @@ form {
 	height: 583px;
 	padding: 20px;
 	box-shadow: 2px 2px 5px rgba(0,0,0,0.82);
+	position: fixed;
+	top: 7%;
+	left: 30%;
 }
 .group {
 	margin: 10px;

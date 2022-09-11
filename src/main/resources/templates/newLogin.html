@@ -1,10 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://thymeleaf.org">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Новый Логин</title>
+    <link rel="stylesheet" href="/assets/newInf/newInf.css">
 </head>
 <body>
-$END$
+<form th:action="@{/setLogin}" th:method="POST">
+    <h4>Изменение Логина Пользователя </h4>
+    <label>Новый Логин:</label>
+    <input type="text" th:value="${setLogin1}" name="setLogin1"></input>
+    <button type="submit">Изменить Логин</button>
+</form>
 </body>
 </html>

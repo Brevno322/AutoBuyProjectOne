@@ -1,10 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://thymeleaf.org">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Объявление</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap&subset=cyrillic-ext" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/declaration/declarationCss.css">
 </head>
 <body>
-$END$
+
+<form class="user"  method="post" th:action="@{/declaration}" th:each="car:${declaration}">
+    <h4>Объявление:№<em th:text="${car.id}" ></em></h4>
+
+    <div class="group">
+        <label>Марка авто:<em th:text="${car.marka}" ></em></label>
+        <output type="text"  name="log"></output>
+    </div>
+    <div class="group">
+        <label>Тип кузова:<em th:text="${car.type}" ></em></label>
+        <output type="text"  name="log"></output>
+    </div>
+    <div class="group">
+        <label>Объем двигателя:<em th:text="${car.engine}" ></em></label>
+        <output type="text"  name="log"></output>
+    </div>
+    <div class="group">
+        <label>Цвет авто:<em th:text="${car.colour}" ></em></label>
+        <output type="text"  name="log"></output>
+    </div>
+    <div class="group">
+        <label>КПП:<em th:text="${car.kpp}" ></em></label>
+        <output type="text"  name="log"></output>
+    </div>
+    <a  th:href="@{/deleteDeclaration/{id}(id = ${car.id})}" class="main-block_buttonone">Удалить</a>
+    <a href="/updateDeclaration" class="main-block_buttontwo">Изменить</a>
+</form>
 </body>
 </html>

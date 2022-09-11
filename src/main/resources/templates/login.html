@@ -4,22 +4,27 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Вход</title>
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="/assets/login/css/logincss.css">
+
 </head>
 <body>
-<p th:text="${loginForm}"></p>
-	<form class="form" method="POST" action="/login">
+<div th:switch="${loginForm}">
+	<p th:case="LOGIN_EXISTS">Login is used</p>
+	<p th:case="'EMAIL_EXISTS'">Email is used</p>
+</div>
+	<form class="form" method="POST" th:action="@{/login}" th:object="${loginForm}">
 		<h1>Вход</h1>
-		<div class="input-form">
-			<input name="login" type="text" placeholder="Логин">
+		<div th:unles ="${session.LoginStatus=='OK'}"class="input-form">
+			<input name="login"  th:field="*{login}" type="text" placeholder="Логин">
 		</div>
 		<div class="input-form">
-			<input name="password" type="password" placeholder="Пароль">
+			<input name="password" th:field="*{password}" type="password" placeholder="Пароль">
 		</div>
-		<div class="input-form">
-			<input type="submit" value="Войти">
-		</div>
-		<a href="#" class="forget">Забыли пароль?</a>
+		<div class="input-form" >
+			<button type="submit" >Вход</button>
+
+</div>
+		<a href="#" class="forget" >Забыли пароль?</a>
 	</form>
 
 </body>

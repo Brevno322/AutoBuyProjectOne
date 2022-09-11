@@ -1,0 +1,42 @@
+body {
+    background:linear-gradient(rgba(255, 3, 3, 0.3),rgba(0,0,0,.3)), url(167947-legkovyye_avtomobili-sportkar-delorian-dms_delorian-komplektacii_avtomobilya-1920x1080.jpg);
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: sans-serif;
+    display: flex;
+    left: 35%;
+    top: 12%;
+}
+.group {
+    margin: 10px;
+    padding: 5px;
+
+}
+
+label {
+    padding-left: 10px;
+    text-transform: uppercase;
+}
+form {
+
+    margin: 0 auto;
+    background: rgb(97 116 167 / 77%);
+    width: 240px;
+    height: 310px;
+    padding: 20px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.82);
+    top: 7%;
+    left: 7%;
+}
+button {
+    cursor: pointer;
+    padding: 10px 30px;
+    height: 50px;
+    color: #fff;
+    background: #5200a5;
+    border: none;
+    text-transform: uppercase;
+    font-size: 15px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.82);
+}

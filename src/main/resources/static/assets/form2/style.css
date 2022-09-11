@@ -1,5 +1,5 @@
 body {
-	background:  linear-gradient(rgba(255, 3, 3, 0.3),rgba(0,0,0,.3)), url(/assets/img/auto-788747_1280.jpg);
+	background:  linear-gradient(rgba(255, 3, 3, 0.3),rgba(0,0,0,.3)), url(../img/auto-788747_1280.jpg);
 	-webkit-background-size: cover;
 	background-size: cover;
 	background-attachment: fixed;

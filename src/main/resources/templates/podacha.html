@@ -1,34 +1,89 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
-	  xmlns:th="http://thymeleaf.org">
+      xmlns:th="http://thymeleaf.org">
 <head>
-	<meta charset="UTF-8">
-	<title>Объявления</title>
-	<link rel="stylesheet" href="/static/assets/podacha/css/podachastyle.css">
+    <meta charset="UTF-8">
+    <title>Объявления</title>
+    <link rel="stylesheet" href="/assets/podacha/css/podachastyle.css">
+
 </head>
 <body>
-<p th:text="${promoForm}"></p>
-	<form class="group" method="post" th:action="@{/promo}" th:object="${promoForm}">
-		<center><h1 title="Форма регистрации на сайте">Подача Объявления</h1></center>
-		<div class="group">
-			<input type="text" name="marka" th:fild="*{marka}" placeholder="Марка авто">
-		</div>
-		<div class="group">
-			<input type="text" name="type" th:fild="*{type}" placeholder="Тип кузова">
-		</div>
-		<div class="group">
-			<input type="text" name="engine" th:fild="*{engine}" placeholder="Объем двигателя">
-		</div>
-		<div class="group">
-			<input type="text" name="colour" th:fild="*{colour}" placeholder="Цвет авто">
-		</div>
-         <div class="group">
-            <input type="text" name="kpp" th:fild="*{kpp}" placeholder="Вид КПП">
-          </div>
-		<div class="group">
-			<button>Подать Объявления</button>
-		</div>
-       
-	</form>
+<form class="group" method="post" th:action="@{/promo}" th:object="${promoForm}">
+    <center><h1 title="Форма регистрации на сайте">Подача Объявления</h1></center>
+    <div class="group">
+
+
+        <input list="marks" type="text" name="marka" th:fild="*{marka}" placeholder="Марка авто">
+        <datalist id="marks">
+
+            <option value="BMW"/>
+            <option value="Mercedes"/>
+            <option value="LADA"/>
+            <option value="Renault"/>
+            <option value="Fiat"/>
+            <option value="Honda"/>
+            <option value="KIA"/>
+            <option value="chevrolet"/>
+            <option value="Skoda"/>
+            <option value="Toyota"/>
+
+        </datalist>
+
+    </div>
+    <div class="group">
+        <input list="type" type="text" name="type" th:fild="*{type}" placeholder="Тип кузова">
+        <datalist id="type">
+            <option value="седан"/>
+            <option value="универсал"/>
+            <option value="хэтч-бэк"/>
+            <option value="купе"/>
+            <option value="кабриолет"/>
+            <option value="минивен"/>
+        </datalist>
+    </div>
+    <div class="group">
+        <input list="engine" type="text" name="engine" th:fild="*{engine}" placeholder="Объем двигателя">
+   <datalist id="engine">
+       <option value="1.1"/>
+       <option value="1.2"/>
+       <option value="1.3"/>
+       <option value="1.4"/>
+       <option value="1.5"/>
+       <option value="1.6"/>
+       <option value="1.7"/>
+       <option value="1.8"/>
+       <option value="1.9"/>
+       <option value="2.0"/>
+       <option value="2.1"/>
+       <option value="2.2"/>
+   </datalist>
+    </div>
+    <div class="group">
+        <input  list="colour" type="text" name="colour" th:fild="*{colour}" placeholder="Цвет авто">
+    <datalist id="colour">
+        <option value="Белый"/>
+        <option value="Желтый"/>
+        <option value="Зеленый"/>
+        <option value="Красный"/>
+        <option value="Серый"/>
+        <option value="Синий"/>
+        <option value="Фиолетовый"/>
+        <option value="Черный"/>
+    </datalist>
+    </div>
+    <div class="group">
+        <input  list="kpp" type="text" name="kpp" th:fild="*{kpp}" placeholder="Вид КПП">
+    <datalist id="kpp">
+        <option value="Механическая"/>
+        <option value="Автоматическая"/>
+        <option value="Робот"/>
+        <option value="Вариатор"/>
+    </datalist>
+    </div>
+    <div class="group">
+        <button>Подать Объявления</button>
+    </div>
+
+</form>
 </body>
 </html>

@@ -4,13 +4,17 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Авторизация</title>
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="/assets/form2/style.css">
+
 </head>
 <body>
-<p th:text="${registrationForm}"></p>
+<div th:switch="${session.registrationStatus}">
+	<p th:case="LOGIN_EXISTS">Login is used</p>
+	<p th:case="'EMAIL_EXISTS'">Email is used</p>
+	</div>
 	<form th:action="@{/registration}" th:object="${registrationForm}" th:method="POST">
 		<center><h1 title="Форма регистрации на сайте">Регистрация</h1></center>
-		<div class="group">
+		<div th:unles="${session.LoginStatus=='OK'}" class="group">
 			<label for="">Имя пользователя:</label>
 			<input type="text" th:field="*{login}" name="login">
 		</div>
